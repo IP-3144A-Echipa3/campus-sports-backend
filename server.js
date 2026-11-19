@@ -4,6 +4,7 @@ const cors = require('cors');
 const sequelize = require('./config/database');
 const terenRoutes = require('./routes/terenRoutes');
 const authRoutes = require('./routes/authRoutes');
+const utilizatorRoutes = require('./routes/utilizatorRoutes');
 
 const app = express();
 
@@ -14,6 +15,7 @@ app.use(express.json());
 // Routes
 app.use('/api/terenuri', terenRoutes);
 app.use('/api/auth', authRoutes);
+app.use('/api/utilizatori', utilizatorRoutes);
 // TODO (Future Commits): app.use('/api/rezervari', rezervariRoutes);
 
 const PORT = process.env.PORT || 3000;
